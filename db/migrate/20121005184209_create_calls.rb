@@ -20,6 +20,8 @@ class CreateCalls < ActiveRecord::Migration
       t.string :DialCallDuration
       t.string :DialCallStatus
       t.string :RecordingUrl
+      t.integer :DialCallMinutes
+      t.timestamps
     end
   end
 end

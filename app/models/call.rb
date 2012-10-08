@@ -33,9 +33,10 @@ class Call < ActiveRecord::Base
     	:DialCallSid => params['DialCallSid'],
     	:DialCallDuration => params['DialCallDuration'],
     	:DialCallStatus => params['DialCallStatus'],
-    	:RecordingUrl => params['RecordingUrl']
+    	:RecordingUrl => params['RecordingUrl'],
+    	:DialCallMinutes => (params['DialCallDuration'].to_f/60.to_f).ceil
   	}
-  	
+
   	call = Call.where( :CallSid => params['CallSid'] ).first
   	call.update_attributes twilio_request_params
   	call.save

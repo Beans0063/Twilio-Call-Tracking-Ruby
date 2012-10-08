@@ -14,25 +14,28 @@
 ActiveRecord::Schema.define(:version => 20121005184209) do
 
   create_table "calls", :force => true do |t|
-    t.string "AccountSid"
-    t.string "From"
-    t.string "To"
-    t.string "CallStatus"
-    t.string "ApiVersion"
-    t.string "Direction"
-    t.string "FromCity"
-    t.string "FromState"
-    t.string "FromZip"
-    t.string "FromCountry"
-    t.string "ToCity"
-    t.string "ToState"
-    t.string "ToZip"
-    t.string "ToCountry"
-    t.string "CallSid"
-    t.string "DialCallSid"
-    t.string "DialCallDuration"
-    t.string "DialCallStatus"
-    t.string "RecordingUrl"
+    t.string   "AccountSid"
+    t.string   "From"
+    t.string   "To"
+    t.string   "CallStatus"
+    t.string   "ApiVersion"
+    t.string   "Direction"
+    t.string   "FromCity"
+    t.string   "FromState"
+    t.string   "FromZip"
+    t.string   "FromCountry"
+    t.string   "ToCity"
+    t.string   "ToState"
+    t.string   "ToZip"
+    t.string   "ToCountry"
+    t.string   "CallSid"
+    t.string   "DialCallSid"
+    t.string   "DialCallDuration"
+    t.string   "DialCallStatus"
+    t.string   "RecordingUrl"
+    t.integer  "DialCallMinutes"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
 end
